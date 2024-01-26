@@ -15,13 +15,15 @@ function App() {
     <div>
       <h1>학생 목록</h1>
       <ul>
-        {filteredStudents.map((student) => (
+        {filteredStudents.map((student, idx) => (
           <li
             style={{ cursor: "pointer" }}
             onClick={() => {
-              alert(`${student.name}의 나이는 ${student.age}`);
+              alert(
+                `나이는 ${student.age}이고, 점수는 ${student.grade}입니다.`
+              );
             }}
-            key={student.name}
+            key={idx}
           >
             {student.name}
           </li>
